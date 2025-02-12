@@ -3,7 +3,6 @@ import secrets
 
 def decryption(encrypted_text, seed):
     decrypted = []
-    
     random = secrets.SystemRandom(seed)
     
     for i, char in enumerate(encrypted_text):
@@ -14,8 +13,7 @@ def decryption(encrypted_text, seed):
     
     return ''.join(decrypted)
 
-with open('VaultKey_encrypted.txt', 'r', encoding='utf-8') as f:
-    encrypted_text = f.read()
+encrypted_text = "P \u00b1»¾u¼ÊÌÆ³ÒØêõî÷¬úð®øüûÀÉ&æÛ&6,ñ@ðLENNÿHQIRVl^ay=&noxI}xX\¥hp¯v¶ÀÎ^"
 
 original_text = ""  
 secret_key = str(sum(ord(c) for c in original_text))
